@@ -47,20 +47,6 @@ namespace WebJourneys.Infrastructure.Data.Extentions
                         await context.IATACodes.AddRangeAsync(iataCodes);
                         await context.SaveChangesAsync();
                     }
-
-                    //Recovering exchange
-                    using (var httpClient = new HttpClient())
-                    {
-                        using (var response = await httpClient.GetAsync("https://v6.exchangerate-api.com/v6/b033f9c3c2db55cc0858d44e/latest/USD"))
-                        {
-                            if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                            {
-                                string apiResponse = await response.Content.ReadAsStringAsync();
-                                
-                            }
-                        }
-                    }
-
                 }
                 
                 catch (Exception ex)
