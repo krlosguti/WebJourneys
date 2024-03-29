@@ -1,0 +1,6 @@
+@WebJourneys.Presentation_HostAddress = http://localhost:5204
+
+GET {{WebJourneys.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
