@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJourneys.Application", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJourneys.Infrastructure", "WebJourneys.Infrastructure\WebJourneys.Infrastructure.csproj", "{066FBF20-C9C7-4218-8C22-6028FC5559CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJourneys.Tests", "WebJourneys.Tests\WebJourneys.Tests.csproj", "{0360F480-A47B-40C0-84B6-71B242785A77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{066FBF20-C9C7-4218-8C22-6028FC5559CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{066FBF20-C9C7-4218-8C22-6028FC5559CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{066FBF20-C9C7-4218-8C22-6028FC5559CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0360F480-A47B-40C0-84B6-71B242785A77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0360F480-A47B-40C0-84B6-71B242785A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0360F480-A47B-40C0-84B6-71B242785A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0360F480-A47B-40C0-84B6-71B242785A77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
