@@ -26,5 +26,11 @@ namespace WebJourneys.Presentation.Controllers
         {
             return _mediator.Send(new GetAllFlightsQuery());
         }
+
+        [HttpPost]
+        public Task<FlightResponse> CreateFlight([FromBody] CreateFlightCommand newFlight)
+        {
+            return _mediator.Send(newFlight);
+        }
     }
 }

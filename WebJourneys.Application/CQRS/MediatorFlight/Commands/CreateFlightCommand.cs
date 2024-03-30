@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,17 @@ namespace WebJourneys.Application.CQRS.MediatorFlight.Commands
         public string Destination { get; set; }
         public double Price { get; set; }
         public int TransportId { get; set; }
+    }
+
+    public class CreateFlightValidator: AbstractValidator<CreateFlightCommand>
+    {
+        public CreateFlightValidator() 
+        {
+            RuleFor(x => x.Origin).NotEmpty().Length(3);
+            RuleFor(x => x.Destination).NotEmpty().Length(3);
+            RuleFor(x => x.Price).GreaterThan(0);
+            RuleFor(x => x.TransportId).GreaterThan(0);
+        }
     }
 
     public class CreateFlightCommandHandler: IRequestHandler<CreateFlightCommand, FlightResponse>
