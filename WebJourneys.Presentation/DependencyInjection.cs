@@ -1,10 +1,13 @@
-﻿namespace WebJourneys.Presentation
+﻿using WebJourneys.Presentation.Middleware;
+
+namespace WebJourneys.Presentation
 {
     public static class DependencyInjection
     {
         public static IServiceCollection AddPresentationServices(this IServiceCollection services)
         {
-            //connection string
+            services.AddExceptionHandler<GlobalExceptionHandler>();
+            services.AddProblemDetails();
             return services;
         }
 

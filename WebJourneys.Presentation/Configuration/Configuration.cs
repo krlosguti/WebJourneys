@@ -29,7 +29,8 @@ namespace WebJourneys.Presentation.Configuration
                 DataInitializer.SeedData(services);
             }
 
-
+            //app.UseExceptionHandler();
+            app.UseExceptionHandler((_ => { }));
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
