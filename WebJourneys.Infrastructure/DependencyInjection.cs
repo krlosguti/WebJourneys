@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebJourneys.Application.Contracts;
+using WebJourneys.Infrastructure.Contracts;
 using WebJourneys.Infrastructure.Data;
 
 namespace WebJourneys.Infrastructure
@@ -16,6 +18,11 @@ namespace WebJourneys.Infrastructure
         {
             //connection string
             services.AddDbContext<ApplicationDbContext>(o => o.UseInMemoryDatabase("DBJourneys"));
+
+
+            services.AddTransient<IFlightRepository, FlightRepository>();
+            services.AddTransient<ITransportRepository, TransportRepository>();
+
             return services;
         }
     }
