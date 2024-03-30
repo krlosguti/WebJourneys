@@ -18,8 +18,4 @@
     <ProjectReference Include="..\WebJourneys.Application\WebJourneys.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\Configurations\" />
-  </ItemGroup>
-
 </Project>
