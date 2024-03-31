@@ -11,5 +11,7 @@ namespace WebJourneys.Application.Contracts
     public interface IFlightRepository: IBaseRepository<Flight>
     {
         Task<IEnumerable<Flight>> GetAllFlightsWithOrigin(string Origin);
+        Task<IEnumerable<IEnumerable<Flight>>> GetAllFlights(string Origin, string Destination);
+        Task<IEnumerable<Flight>> GetAllFlightsWithTransport();
     }
 }

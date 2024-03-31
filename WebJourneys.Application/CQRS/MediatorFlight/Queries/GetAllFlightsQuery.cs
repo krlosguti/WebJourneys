@@ -13,6 +13,7 @@ namespace WebJourneys.Application.CQRS.MediatorFlight.Queries
 {
     public class GetAllFlightsQuery : IRequest<List<FlightResponse>>
     {
+        string coin { get; set; } = "USD";
     }
 
     public class GetAllFlightsQueryHandler : IRequestHandler<GetAllFlightsQuery, List<FlightResponse>>
