@@ -29,12 +29,10 @@ namespace WebJourneys.Tests.FlightTest
                     Origin = "MZL",
                     Destination = "BOG",
                     Price=1000,
-                    Transport=new Domain.Models.Transport
-                    {
-                        Id=1,
-                        FlightCarrier="AV",
-                        FlightNumber="8080"
-                    }
+                    TransportId=1,
+                    Coin = "USD",
+                    PriceCoin = 1000,
+                    NameTransport = "AV8080"
                 }
             );
 
@@ -66,12 +64,10 @@ namespace WebJourneys.Tests.FlightTest
                     Origin = "MZL",
                     Destination = "BOG",
                     Price = 1000,
-                    Transport = new Domain.Models.Transport
-                    {
-                        Id = 1,
-                        FlightCarrier = "AV",
-                        FlightNumber = "8080"
-                    }
+                    TransportId = 1,
+                    Coin = "USD",
+                    PriceCoin = 1000,
+                    NameTransport = "AV8080"
                 }
             );
 
@@ -82,7 +78,7 @@ namespace WebJourneys.Tests.FlightTest
             var controller = new FlightController(mockMediator.Object);
 
             // Act
-            var actionResult = await controller.GetFlighs();
+            var actionResult = await controller.GetFlights();
 
             // Assert
             var okObjectResult = Assert.IsType<List<FlightResponse>>(actionResult);
@@ -104,12 +100,10 @@ namespace WebJourneys.Tests.FlightTest
                     Origin = "MZL",
                     Destination = "BOG",
                     Price = 1000,
-                    Transport = new Domain.Models.Transport
-                    {
-                        Id = 1,
-                        FlightCarrier = "AV",
-                        FlightNumber = "8080"
-                    }
+                    TransportId = 1,
+                    Coin = "USD",
+                    PriceCoin = 1000,
+                    NameTransport = "AV8080"
                 };
 
             mockMediator

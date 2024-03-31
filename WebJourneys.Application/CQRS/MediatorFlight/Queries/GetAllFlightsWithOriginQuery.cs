@@ -1,13 +1,16 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Builder;
 using WebJourneys.Application.Contracts;
 using WebJourneys.Application.Dtos;
+using WebJourneys.Domain.Models;
 
 namespace WebJourneys.Application.CQRS.MediatorFlight.Queries
 {
     public class GetAllFlightsWithOriginQuery : IRequest<List<FlightResponse>>
     {
         public string Origin { get; set; }
+        public string Coin { get; set; } = "USD";
     }
 
     public class GetAllFlightsWithOriginHandler : IRequestHandler<GetAllFlightsWithOriginQuery, List<FlightResponse>>
