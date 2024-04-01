@@ -15,6 +15,7 @@ namespace WebJourneys.Application.MapperConfiguration
         public ModelProfile() 
         {
             CreateMap<CreateFlightCommand, Flight>().ReverseMap();
+            CreateMap<IATACode, City>();
             CreateMap<Flight, FlightResponse>()
                 .ForMember(dest => dest.NameTransport, act => act.MapFrom(src => src.Transport.GetVuelo()));
         }
